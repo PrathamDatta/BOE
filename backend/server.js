@@ -24,7 +24,11 @@ app.get('/api/companies', async (req, res) => {
     const { rows } = await db.query('SELECT * FROM companies ORDER BY id ASC');
     res.json(rows);
   } catch (err) {
-    res.status(500).json({ error: err.message });
+    res.status(500).json({ 
+      error: err.message || 'Unknown database error', 
+      details: err.toString(),
+      isDbUrlSet: !!process.env.DATABASE_URL 
+    });
   }
 });
 
