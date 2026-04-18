@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useCompany } from '../context/CompanyContext';
 import { Search, Filter, ChevronDown } from 'lucide-react';
 import axios from 'axios';

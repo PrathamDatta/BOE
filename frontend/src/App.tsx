@@ -1,4 +1,4 @@
-import React from 'react';
+// Removed unused React import
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { CompanyProvider } from './context/CompanyContext';
 import { Layout } from './components/Layout';
