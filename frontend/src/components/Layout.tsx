@@ -44,7 +44,10 @@ export const Layout: React.FC = () => {
         {/* User Actions */}
         <div className="p-4 border-t border-white/5">
           <button 
-            onClick={() => navigate('/login')}
+            onClick={() => {
+              localStorage.removeItem('isAuthenticated');
+              navigate('/login');
+            }}
             className="flex w-full items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 text-slate-400 hover:bg-red-500/10 hover:text-red-400"
           >
             <LogOut className="w-5 h-5" />

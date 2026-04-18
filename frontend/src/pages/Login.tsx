@@ -13,6 +13,7 @@ export const Login: React.FC = () => {
     setIsLoading(true);
     // Simulate login
     setTimeout(() => {
+      localStorage.setItem('isAuthenticated', 'true');
       setIsLoading(false);
       navigate('/');
     }, 800);
